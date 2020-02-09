@@ -1,0 +1,43 @@
+#server configuration
+server:
+  port: 4040
+
+    
+#db related configuration    
+spring:
+  mvc:
+    view:
+      prefix: /views/ 
+      suffix: .jsp
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: rahultelangre88@gmail.com
+    password: -------
+    protocol: smtp
+    properties:
+      mail:
+       smtp:
+        auth: true
+        starttls:
+         enable: true
+        ssl:
+         trust: smtp.gmail.com
+      
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521/XE
+    username: system
+    password: manager
+ 
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+form-app: 
+  messages: 
+    succMsg: Vechicle Registration Successfull   
